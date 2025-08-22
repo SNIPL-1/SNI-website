@@ -1,58 +1,106 @@
 <!DOCTYPE html>
-<th>Description</th>
-<th>Price/Unit</th>
-<th>Unit</th>
-<th>MOQ</th>
-<th>WhatsApp</th>
-</tr>
-</thead>
-<tbody></tbody>
-</table>
-</div>
-</div>
-</section>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grotech Tools | SNI Pvt Ltd</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <h1 id="company-name">SNI Pvt Ltd</h1>
+        <p id="company-tagline">Quality Tools for Every Industry</p>
+      </div>
+      <nav class="nav">
+        <a href="#home" id="nav-home">Home</a>
+        <a href="#catalog" id="nav-catalog">Catalogue</a>
+        <a href="#about" id="nav-about">About</a>
+        <a href="#contact" id="nav-contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
+  <main class="container">
+    <!-- HOME: show UNIQUE CATEGORIES only -->
+    <section id="home" class="route">
+      <h2>Browse by Category</h2>
+      <div id="category-grid" class="grid"></div>
+    </section>
 
-<!-- ABOUT -->
-<section id="about" class="route hidden">
-<h2>About Us</h2>
-<p id="company-about"></p>
-<div id="about-gallery" class="grid"></div>
-</section>
+    <!-- CATALOG: within a chosen category show UNIQUE ITEM CODES once -->
+    <section id="catalog" class="route hidden">
+      <div class="breadcrumbs" id="catalog-breadcrumbs"></div>
+      <h2 id="catalog-title">Products</h2>
+      <input type="text" id="search" placeholder="Search within this category..." />
+      <div id="product-grid" class="grid"></div>
+    </section>
 
+    <!-- PRODUCT DETAILS: show variants table -->
+    <section id="product" class="route hidden">
+      <div class="breadcrumbs" id="product-breadcrumbs"></div>
+      <div id="product-details" class="product-details"></div>
+      <div class="variants-wrap">
+        <h3>Available Variants</h3>
+        <div class="table-wrap">
+          <table id="variants-table">
+            <thead>
+              <tr>
+                <th>Variant Code</th>
+                <th>Description</th>
+                <th>Price/Unit</th>
+                <th>Unit</th>
+                <th>MOQ</th>
+                <th>WhatsApp</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
-<!-- CONTACT: posts to Apps Script and saves to Google Sheet 'Inquiries' tab -->
-<section id="contact" class="route hidden">
-<h2>Contact Us</h2>
-<form id="contact-form" class="card">
-<div class="row">
-<input type="text" name="name" placeholder="Your Name" required />
-<input type="email" name="email" placeholder="Your Email" required />
-</div>
-<div class="row">
-<input type="text" name="phone" placeholder="Your Phone" required />
-<input type="text" name="city" placeholder="City / Country" />
-</div>
-<textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-<button type="submit">Send Inquiry</button>
-<p id="form-status" class="muted"></p>
-</form>
-<div class="contact-info">
-<p><strong>Email:</strong> <span id="info-email">—</span></p>
-<p><strong>Phone:</strong> <span id="info-phone">—</span></p>
-<p><strong>Address:</strong> <span id="info-address">—</span></p>
-</div>
-</section>
-</main>
+    <!-- ABOUT -->
+    <section id="about" class="route hidden">
+      <h2>About Us</h2>
+      <p id="company-about"></p>
+      <div id="about-gallery" class="grid"></div>
+    </section>
 
+    <!-- CONTACT: posts to Apps Script and saves to Google Sheet 'Inquiries' tab -->
+    <section id="contact" class="route hidden">
+      <h2>Contact Us</h2>
+      <form id="contact-form" class="card">
+        <div class="row">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+        </div>
+        <div class="row">
+          <input type="text" name="phone" placeholder="Your Phone" required />
+          <input type="text" name="city" placeholder="City / Country" />
+        </div>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Inquiry</button>
+        <p id="form-status" class="muted"></p>
+      </form>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <span id="info-email">—</span></p>
+        <p><strong>Phone:</strong> <span id="info-phone">—</span></p>
+        <p><strong>Address:</strong> <span id="info-address">—</span></p>
+      </div>
+    </section>
+  </main>
 
-<footer class="site-footer">
-<div class="container">
-<p>© <span id="year"></span> SNI Pvt Ltd — Grotech Tools</p>
-</div>
-</footer>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> SNI Pvt Ltd — Grotech Tools</p>
+    </div>
+  </footer>
 
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+```
+
