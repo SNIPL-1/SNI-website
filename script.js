@@ -1,10 +1,11 @@
 //const productsCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTBzZ-oe22p1secr4Z1JGc105GaDHzH7eJvXIVcHDcNQ2WNYTZKFlwUyQcNjb6XuAvYCvcrovvcnajj/pub?gid=406069211&single=true&output=csv";
 //const companyCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTBzZ-oe22p1secr4Z1JGc105GaDHzH7eJvXIVcHDcNQ2WNYTZKFlwUyQcNjb6XuAvYCvcrovvcnajj/pub?gid=0&single=true&output=csv";
 //const formEndpoint = "https://script.google.com/macros/s/AKfycbwYyQMsjC6y2_cU9LcoD7hpw41ml7-VlFTJBrgKfhkdapEU2fkhUvM3yEdB_KxBf42B/exec";
+//https://docs.google.com/spreadsheets/d/e/2PACX-1vTBzZ-oe22p1secr4Z1JGc105GaDHzH7eJvXIVcHDcNQ2WNYTZKFlwUyQcNjb6XuAvYCvcrovvcnajj/pubhtml?gid=406069211&single=true
 
-const PRODUCTS_CSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTBzZ-oe22p1secr4Z1JGc105GaDHzH7eJvXIVcHDcNQ2WNYTZKFlwUyQcNjb6XuAvYCvcrovvcnajj/pub?gid=130729846&single=true&output=csv';
-const COMPANY_CSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTBzZ-oe22p1secr4Z1JGc105GaDHzH7eJvXIVcHDcNQ2WNYTZKFlwUyQcNjb6XuAvYCvcrovvcnajj/pub?gid=0&single=true&output=csv';
-const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwYyQMsjC6y2_cU9LcoD7hpw41ml7-VlFTJBrgKfhkdapEU2fkhUvM3yEdB_KxBf42B/exec';
+const PRODUCTS_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTBzZ-oe22p1secr4Z1JGc105GaDHzH7eJvXIVcHDcNQ2WNYTZKFlwUyQcNjb6XuAvYCvcrovvcnajj/pub?gid=130729846&single=true&output=csv";
+const COMPANY_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTBzZ-oe22p1secr4Z1JGc105GaDHzH7eJvXIVcHDcNQ2WNYTZKFlwUyQcNjb6XuAvYCvcrovvcnajj/pub?gid=0&single=true&output=csv";
+const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbwYyQMsjC6y2_cU9LcoD7hpw41ml7-VlFTJBrgKfhkdapEU2fkhUvM3yEdB_KxBf42B/exec";
 
 // Utility to parse CSV to JSON
 async function fetchCSV(url) {
@@ -159,4 +160,5 @@ function handleContactForm() {
 }
 
 window.onload = initSite;
+
 
