@@ -1,57 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grotech Tools | SNI Pvt Ltd</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-</head>
-<body>
-  <header>
-    <h1 id="company-name"></h1>
-    <p id="company-tagline"></p>
-  </header>
+<th>Description</th>
+<th>Price/Unit</th>
+<th>Unit</th>
+<th>MOQ</th>
+<th>WhatsApp</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+</div>
+</section>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#catalog">Products</a>
-    <a href="#sectors">By Sector</a>
-    <a href="#contact">Contact Us</a>
-  </nav>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p id="company-about"></p>
-  </section>
+<!-- ABOUT -->
+<section id="about" class="route hidden">
+<h2>About Us</h2>
+<p id="company-about"></p>
+<div id="about-gallery" class="grid"></div>
+</section>
 
-  <section id="catalog">
-    <h2>Product Catalogue</h2>
-    <input type="text" id="search" placeholder="Search products..." />
-    <div id="product-list" class="grid"></div>
-  </section>
 
-  <section id="sectors">
-    <h2>Products by Sector</h2>
-    <div id="sector-list" class="grid"></div>
-  </section>
+<!-- CONTACT: posts to Apps Script and saves to Google Sheet 'Inquiries' tab -->
+<section id="contact" class="route hidden">
+<h2>Contact Us</h2>
+<form id="contact-form" class="card">
+<div class="row">
+<input type="text" name="name" placeholder="Your Name" required />
+<input type="email" name="email" placeholder="Your Email" required />
+</div>
+<div class="row">
+<input type="text" name="phone" placeholder="Your Phone" required />
+<input type="text" name="city" placeholder="City / Country" />
+</div>
+<textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+<button type="submit">Send Inquiry</button>
+<p id="form-status" class="muted"></p>
+</form>
+<div class="contact-info">
+<p><strong>Email:</strong> <span id="info-email">—</span></p>
+<p><strong>Phone:</strong> <span id="info-phone">—</span></p>
+<p><strong>Address:</strong> <span id="info-address">—</span></p>
+</div>
+</section>
+</main>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form id="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="text" name="phone" placeholder="Your Phone" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Inquiry</button>
-    </form>
-    <p id="form-status"></p>
-  </section>
 
-  <footer>
-    <p>© 2025 SNI Pvt Ltd - Grotech Tools</p>
-  </footer>
+<footer class="site-footer">
+<div class="container">
+<p>© <span id="year"></span> SNI Pvt Ltd — Grotech Tools</p>
+</div>
+</footer>
 
-  <script src="script.js"></script>
+
+<script src="script.js"></script>
 </body>
 </html>
